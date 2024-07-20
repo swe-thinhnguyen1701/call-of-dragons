@@ -1,0 +1,103 @@
+:root {
+    --white-color: #fff;
+    --gold-color: #c28f2c;
+    --dark-blue-color: #191c27;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* margin: 0 auto; */
+    margin: 20px;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+}
+
+/* LOGO */
+.logo-base,
+.logo-text {
+    color: var(--gold-color);
+}
+
+.logo-base {
+    font-family: "Libre Baskerville", serif;
+    font-size: 6.2rem;
+    letter-spacing: 5px;
+}
+
+.logo-text {
+    font-size: 1.123rem;
+    letter-spacing: 3.5px;
+}
+
+.logo-container {
+    position: relative;
+}
+
+.logo-base {
+    position: absolute;
+    left: 2px;
+}
+
+.logo-text {
+    background-color: var(--white-color);
+    position: absolute;
+    top: 30px;
+    left: 7px;
+    z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .logo-base {
+        font-size: 7.2rem;
+    }
+
+    .logo-text{
+        font-size: 1.5rem;
+        top: 33px;
+        left: 3px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .logo-base{
+        font-size: 8.2rem;
+    }
+
+    .logo-text{
+        font-size: 1.7rem;
+        top: 37px;
+        left: 7px;
+    }
+}
+
+/* LIST */
+.list{
+    margin: 0;
+    padding: 0;
+}
+
+.list--inline{
+    display: flex;
+}
+
+.list-item{
+    list-style: none;
+}
+
+.list--inline .list-item{
+    margin-right: 20px;
+}
+
+/* LINK */
+.link{
+    /* color: ; */
+}
