@@ -2,6 +2,7 @@
     --white-color: #fff;
     --gold-color: #c28f2c;
     --dark-blue-color: #191c27;
+    --hover-color: hsla(0, 0%, 50%, 0.2);
 }
 
 * {
@@ -14,68 +15,54 @@ html {
 }
 
 body {
-    /* margin: 0 auto; */
-    margin: 20px;
+    margin: 0 auto;
+    /* margin: 20px; */
     padding: 0;
     font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
 }
 
 /* LOGO */
+.logo-img{
+    display: none;
+}
+
 .logo-base,
-.logo-text {
+.logo-sub {
     color: var(--gold-color);
+}
+
+.logo-container {
+    position: relative;    
 }
 
 .logo-base {
     font-family: "Libre Baskerville", serif;
-    font-size: 6.2rem;
-    letter-spacing: 5px;
-}
-
-.logo-text {
-    font-size: 1.123rem;
-    letter-spacing: 3.5px;
-}
-
-.logo-container {
-    position: relative;
-}
-
-.logo-base {
+    font-size: 4rem;
+    letter-spacing: 3px;
     position: absolute;
     left: 2px;
 }
 
-.logo-text {
-    background-color: var(--white-color);
+.logo-sub {
+    background-color: var(--dark-blue-color);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
     position: absolute;
-    top: 30px;
-    left: 7px;
+    left: 8px;
+    top: 21px;
     z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
     .logo-base {
-        font-size: 7.2rem;
+        font-size: 5rem;
     }
 
-    .logo-text{
-        font-size: 1.5rem;
-        top: 33px;
-        left: 3px;
-    }
-}
-
-@media screen and (min-width: 1024px){
-    .logo-base{
-        font-size: 8.2rem;
-    }
-
-    .logo-text{
-        font-size: 1.7rem;
-        top: 37px;
-        left: 7px;
+    .logo-sub{
+        font-size: 1.086rem;
+        top: 23px;
+        left: 5px;
     }
 }
 
@@ -97,7 +84,128 @@ body {
     margin-right: 20px;
 }
 
+.list--inline .list-item:last-child{
+    margin: 0;
+}
+
 /* LINK */
 .link{
-    /* color: ; */
+    color: var(--white-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.link:visited{
+    color: white;
+}
+
+.link--primary:hover, .link--secondary:hover {
+    background-color: hsla(0, 0%, 50%, 0.2);
+}
+
+.link--primary:hover{
+    color: var(--gold-color);
+}
+
+/* BUTTON */
+.btn{
+    background-color: unset;
+    border: none;
+}
+
+/* TOGGLE ICON */
+.toggle-icon-container{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.bar1, .bar2, .bar3{
+    background-color: var(--white-color);
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.bar3{
+    margin: 0;
+}
+
+/* NAV */
+header{
+    background-color: var(--dark-blue-color);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100px; */
+}
+
+.nav-right .list{
+    display: none;
+}
+
+.nav-right .btn{
+    display: flex;
+    padding: 0;
+}
+
+.nav-right .toggle-icon-container{
+    transition: all 0.5s;
+}
+
+.nav-right .btn:hover .toggle-icon-container{
+    cursor: pointer;
+    /* border: 1px solid var(--white-color); */
+    background-color: var(--hover-color);
+    border-radius: 10px;
+}
+
+.nav-left .logo-container{
+    width: 100px;
+}
+
+.nav-left{
+    height: 50px;
+}
+
+@media screen and (min-width: 768px){
+    .nav-left .logo-container{
+        width: 130px;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    .nav-left{
+        height: auto;
+    }
+
+    .nav-left .logo-text{
+        display: none;
+    }
+
+    .nav-left .logo-container{
+        position: unset;
+        width: auto;
+    }
+
+    .nav-left .logo-img{
+        display: flex;
+    }
+
+    .nav-left .logo-img{
+        width: 100px;
+        height: auto;
+    }
+
+    .nav-left .logo-img img{
+        width: 100%;
+    }
 }
