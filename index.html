@@ -4,58 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMB</title>
-    <link rel="icon" href="">
+    <title>IMB-CoD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="public/css/style.css">
+
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="nav-left">
-                <div class="logo-container">
-                    <div class="logo-text">
-                        <div class="logo-base">IMB</div>
-                        <div class="logo-sub">Immortal Biscuit</div>
-                    </div>
-                    <a href="#">
-                        <div class="logo-img">
-                            <img src="/public/images/IMB-logo.png" alt="">
+            <a href="#" class="link">
+                <div class="logo">
+                    <span>IMB</span>
+                    <span>Immortal Biscuit</span>
+                </div>
+            </a>
+            <button class="btn menu-toggle-btn">
+                <div class="menu-toggle-container">
+                    <i class="fa-solid fa-bars menu-toggle-icon"></i>
+                </div>
+            </button>
+            <div id="menu">
+                <div class="hamburger-menu-header">
+                    <a href="#" class="link">
+                        <div class="logo">
+                            <span>IMB</span>
+                            <span>Immortal Biscuit</span>
                         </div>
                     </a>
+                    <button class="btn menu-toggle-btn">
+                        <div class="menu-toggle-container">
+                            <i class="fa-solid fa-x menu-toggle-icon"></i>
+                        </div>
+                    </button>
                 </div>
-            </div>
-            <div class="nav-right">
-                <button class="btn" id="menu-toggle-btn">
-                    <div class="toggle-icon-container">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </button>
-                <ul class="list list--inline">
+                <ul class="list">
                     <li class="list-item">
-                        <a href="#" class="link link--primary">Application</a>
+                        <a href="#" class="link">Application</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="link link--secondary">Application</a>
+                        <a href="#" class="link">Link 1</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="link">Link 1</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/84067cc725.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="./public/js/index.js"></script>
 </body>
 
 </html>
