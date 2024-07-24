@@ -3,7 +3,6 @@ const s3Client = require("../config/aws-connection");
 const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const { GetObjectCommand } = require("@aws-sdk/client-s3");
 const VERSION_ARRAY = ["version_1-27", "version_1-26", "version_1-25"];
-// require("dotenv").config();
 
 router.use("/", async (req, res) => {
     const versions = []
