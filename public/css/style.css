@@ -20,6 +20,10 @@ body {
     margin: 0 auto;
 }
 
+h2, p{
+    margin: 0;
+}
+
 /* LOGO */
 .logo {
     font-family: "Lora", 'Times New Roman', Times, serif;
@@ -194,6 +198,21 @@ main{
         padding-top: 85px;
     }
 }
+
+/* SECTION */
+section{
+    margin-bottom: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+section:first-child{
+    max-width: none;
+}
+
+
+
 /* GREETING */
 .video-container{
     display: flex;
@@ -214,4 +233,60 @@ main{
     letter-spacing: 7px;
     color: #cba943;
     font-weight: bold;
+}
+
+/* Welcome */
+.welcome{
+    text-align: center;
+}
+.welcome div{
+    margin-bottom: 10px;
+}
+.welcome h2{
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.welcome-pitch{
+    line-height: 1.5;
+    transition: all 0.3s;
+}
+
+.welcome__application{
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.welcome__application .chervon{
+    transition: margin-left 0.3s;
+}
+
+.welcome__application .link:hover .chervon{
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 768px){
+    .welcome h2{
+        font-size: 3.5rem;
+    }
+
+    .welcome__application{
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .welcome h2{
+        font-size: 3.9rem;
+    }
+
+    .welcome__application{
+        font-size: 2rem;
+    }
+
+    .welcome-pitch{
+        font-size: 1.4rem;
+    }
 }
