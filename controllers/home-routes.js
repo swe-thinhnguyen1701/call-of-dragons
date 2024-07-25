@@ -2,23 +2,25 @@ const router = require("express").Router();
 const s3Client = require("../config/aws-connection");
 const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const { GetObjectCommand } = require("@aws-sdk/client-s3");
-const VERSION_ARRAY = ["version_1-27", "version_1-26", "version_1-25"];
+const { Version } = require("../models");
+// const VERSION_ARRAY = ["version_1-27", "version_1-26", "version_1-25"];
 
-router.use("/", async (req, res) => {
-    const versions = []
-    for (let v of VERSION_ARRAY) {
+router.get("/", async (req, res) => {
+    const versionData = await Version.findAll({
+        order: [["date_created", "DESC"]]
+    });
+    const versions = versionData.map(version => version.get({ plain: true }));
+    // const versions = [];
+    for (let v of versions) {
         const command = new GetObjectCommand({
             Bucket: process.env.AWS_BUCKET_NAME,
-            Key: `home-page/${v}`
+            Key: `home-page/${v.file_name}`
         });
         const img_url = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
-        const version = {
-            patch: v,
-            img_url: img_url
-        }
-        versions.push(version);
+        v.img_url = img_url;
     }
-    res.render("home-page", {versions});
+    console.log(versions);
+    res.render("home-page", { versions });
 })
 
 module.exports = router;

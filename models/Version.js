@@ -14,7 +14,7 @@ Version.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    img_url: {
+    file_name: {
         type: DataTypes.STRING,
         allowNull: false
     },
