@@ -1,9 +1,8 @@
 const router = require("express").Router();
-const s3Client = require("../config/aws-connection");
 const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const { GetObjectCommand } = require("@aws-sdk/client-s3");
+const s3Client = require("../config/aws-connection");
 const { Version } = require("../models");
-// const VERSION_ARRAY = ["version_1-27", "version_1-26", "version_1-25"];
 
 router.get("/", async (req, res) => {
     const versionData = await Version.findAll({
@@ -19,7 +18,6 @@ router.get("/", async (req, res) => {
         const img_url = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
         v.img_url = img_url;
     }
-    console.log(versions);
     res.render("home-page", { versions });
 })
 
