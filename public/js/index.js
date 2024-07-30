@@ -25,7 +25,7 @@ const heroIntroListHandler = (event) => {
   const heroType = $(event.target).closest("li").data("heroType");
   console.log(heroType);
   const heroIntroBackground = $(".hero-intro-bg");
-  heroIntroBackground.css("background-image", `url(/public/images/${heroType}-intro.webp)`)
+  heroIntroBackground.css("background-image", `url(/images/${heroType}-intro.webp)`)
 }
 
 $(document).ready(() => {
