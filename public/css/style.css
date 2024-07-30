@@ -440,7 +440,7 @@ section h3 {
     align-items: center;
 }
 
-.explore-more-heroes{
+.explore-more{
     background-image: url("/public/images/explore-bg.webp");
     background-repeat: no-repeat;
     background-size: contain;
@@ -456,24 +456,24 @@ section h3 {
     cursor: pointer;
 }
 
-.explore-more-heroes .link{
+.explore-more .link{
     font-size: 0.8rem;
     color: #fff;
     font-weight: bold;
 }
 
-.explore-more-heroes:hover .link{
+.explore-more:hover .link{
     text-decoration: underline;
 }
 
 @media screen and (min-width: 768px){
-    .explore-more-heroes{
+    .explore-more{
         bottom: 25px;
         width: 175px;
         height: 53px;
     }
 
-    .explore-more-heroes .link{
+    .explore-more .link{
         font-size: 1.2rem;
     }
 }
