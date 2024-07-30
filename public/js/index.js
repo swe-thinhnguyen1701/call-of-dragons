@@ -1,6 +1,7 @@
 const menu = $("#menu");
 const video = $("#video");
 const logo = $("#logo");
+const heroIntroList = $("#hero-intro-list");
 
 const menuToggleBtn = $(".menu-toggle-btn");
 
@@ -20,8 +21,16 @@ const videoResize = () => {
   logo.height(width / 1.775);
 }
 
+const heroIntroListHandler = (event) => {
+  const heroType = $(event.target).closest("li").data("heroType");
+  console.log(heroType);
+  const heroIntroBackground = $(".hero-intro-bg");
+  heroIntroBackground.css("background-image", `url(/public/images/${heroType}-intro.webp)`)
+}
+
 $(document).ready(() => {
   menuToggleBtn.on("click", menuToggleHandler);
+  heroIntroList.on("click", ".hero-type-btn", heroIntroListHandler);
   $(window).on("resize", defaultMenu);
   $(window).on("resize", videoResize);
   videoResize();
