@@ -5,6 +5,23 @@ const heroIntroList = $("#hero-intro-list");
 
 const menuToggleBtn = $(".menu-toggle-btn");
 
+let heroIntroImgList = [];
+
+const getHeroIntroImgList =  async () => {
+  await $.ajax({
+    url: "/heroes-intro",
+    method: "GET",
+    success: res => {
+      heroIntroImgList = res;
+      console.log(res);
+    },
+    error: xhr => {
+      console.log(xhr);
+      alert("Internal error");
+    }
+  });
+}
+
 const menuToggleHandler = () => {
   menu.toggle("blind", {}, 500);
 }
@@ -23,14 +40,15 @@ const videoResize = () => {
 
 const heroIntroListHandler = (event) => {
   const heroType = $(event.target).closest("li").data("heroType");
-  console.log(heroType);
   const heroIntroBackground = $(".hero-intro-bg");
-  heroIntroBackground.css("background-image", `url(/images/${heroType}-intro.webp)`)
+  const imgUrl = heroIntroImgList[heroType];
+  heroIntroBackground.css("background-image", `url(${imgUrl})`);
 }
 
-$(document).ready(() => {
+$(document).ready(async () => {
   menuToggleBtn.on("click", menuToggleHandler);
   heroIntroList.on("click", ".hero-type-btn", heroIntroListHandler);
+  await getHeroIntroImgList();
   $(window).on("resize", defaultMenu);
   $(window).on("resize", videoResize);
   videoResize();
