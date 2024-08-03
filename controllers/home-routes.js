@@ -25,6 +25,27 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get("/patch-notes", async (req, res) => {
+    try {
+        const versionData = await Version.findAll({
+            order: [["date_created", "DESC"]]
+        });
+        const versions = versionData.map(version => version.get({ plain: true }));
+        for (let v of versions) {
+            const command = new GetObjectCommand({
+                Bucket: process.env.AWS_BUCKET_NAME,
+                Key: `home-page/${v.file_name}`
+            });
+            const img_url = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
+            v.img_url = img_url;
+        }
+        res.render("patch-notes", { versions });
+    } catch (error) {
+        console.log("ERROR occurs while fetching version images\n", error);
+        res.status(500).json({ message: "Internal error" });
+    }
+});
+
 router.get("/heroes-intro", async (req, res) => {
     try {
         const imgUrlArray = [];
