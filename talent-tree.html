@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of Dragons</title>
+    <link rel="icon" href="public/images/cod-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/" class="link">
+                <div class="logo-container">
+                    <img src="public/images/cod-logo-nav.webp" class="logo-img" alt="">
+                </div>
+            </a>
+            <button class="btn menu-toggle-btn">
+                <div class="menu-toggle-container">
+                    <i class="fa-solid fa-bars menu-toggle-icon"></i>
+                </div>
+            </button>
+            <div id="menu">
+                <div class="hamburger-menu-header">
+                    <a href="#" class="link">
+                        <div class="logo-container">
+                            <img src="public/images/cod-logo-nav.webp" class="logo-img" alt="">
+                        </div>
+                    </a>
+                    <button class="btn menu-toggle-btn">
+                        <div class="menu-toggle-container">
+                            <i class="fa-solid fa-x menu-toggle-icon"></i>
+                        </div>
+                    </button>
+                </div>
+                <ul class="list">
+                    <li class="list-item">
+                        <a href="#" class="link">PATCH NOTES</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="link">Link 1</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="link">Link 1</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="talent-tree-section">
+            <div class="talen-stats">
+                <h4>Total Stats</h4>
+                <ul class="list">
+                    <li class="list-item">Normal Atk: 4%</li>
+                </ul>
+            </div>
+            <div class="talent-ui">
+                <div class="talent-tree">
+                    <ul class="list talent-row" id="talent-list">
+                        <li class="list talent-stat" id="talent-foundation-1">
+                            <div class="talent-group">
+                                <div class="talent-container">
+                                    <div class="talent-img-container">
+                                        <img src="public/images/talent-tree-skills/talent-atk.png" alt=""
+                                            class="talent-img talent-atk">
+                                    </div>
+                                </div>
+                                <div class="talent-level"><span id="talent-points">0</span>/3</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list talent-row" id="talent-list">
+                        <li class="list talent-stat" id="talent-foundation-2-a">
+                            <div class="talent-group">
+                                <div class="talent-container">
+                                    <div class="talent-img-container">
+                                        <img src="public/images/talent-tree-skills/talent-ms.png" alt="" class="talent-img">
+                                    </div>
+                                </div>
+                                <div class="talent-level">3/3</div>
+                            </div>
+                        </li>
+                        <li class="list talent-stat" id="talent-foundation-2-b">
+                            <div class="talent-group">
+                                <div class="talent-container">
+                                    <div class="talent-img-container">
+                                        <img src="public/images/talent-tree-skills/talent-def.png" alt=""
+                                            class="talent-img">
+                                    </div>
+                                </div>
+                                <div class="talent-level">3/3</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list talent-row" id="talent-list">
+                        <li class="list talent-stat" id="talent-foundation-3-a">
+                            <div class="talent-group">
+                                <div class="talent-container">
+                                    <div class="talent-img-container">
+                                        <img src="public/images/talent-tree-skills/talent-farm-sp.png" alt=""
+                                            class="talent-img">
+                                    </div>
+                                </div>
+                                <div class="talent-level">3/3</div>
+                            </div>
+                        </li>
+                        <li class="list talent-stat" id="talent-foundation-3-b">
+                            <div class="talent-group">
+                                <div class="talent-container">
+                                    <div class="talent-img-container">
+                                        <img src="public/images/talent-tree-skills/talent-hp.png" alt="" class="talent-img">
+                                    </div>
+                                </div>
+                                <div class="talent-level"><span class="talent-points">0</span>/3</div>
+                            </div>
+                        </li>
+                        <li class="list talent-stat" id="talent-foundation-3-c">
+                            <div class="talent-group">
+                                <div class="talent-container">
+                                    <div class="talent-img-container">
+                                        <img src="public/images/talent-tree-skills/talent-darklings.png" alt=""
+                                            class="talent-img">
+                                    </div>
+                                </div>
+                                <div class="talent-level">3/3</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list talent-row talent-core" id="talent=list">
+                        <li class="list talent-stat" id="talent-core">
+                            <div class="talent-group">
+                                <div class="talent-container">
+                                    <div class="talent-img-container">
+                                        <img src="public/images/talent-tree-skills/talent-core-skill.webp" alt=""
+                                            class="talent-img talent-atk">
+                                    </div>
+                                </div>
+                                <div class="talent-level">3/3</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="list talent-branch-list">
+                    <li class="list-item">
+                        <div class="badge badge--troop">
+                            <img src="/public/images/talent-tree-skills/inf-logo.webp" alt=""
+                                class="talent-logo">Infantry
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="badge badge--primary"><img src="/public/images/talent-tree-skills/tank-icon.webp"
+                                alt="" class="talent-logo">Tank</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="badge badge--secondary"><img src="/public/images/talent-tree-skills/rally-icon.webp"
+                                alt="" class="talent-logo">Garrison</div>
+                    </li>
+                </ul>
+                <div class="talent-tree-sub">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/84067cc725.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="public/js/index.js"></script>
+</body>
+
+</html>

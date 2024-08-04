@@ -1,7 +1,9 @@
 const menu = $("#menu");
 const video = $("#video");
 const logoFrame = $(".logo-frame");
+
 const heroIntroList = $("#hero-intro-list");
+const talentList = $("#talent-list");
 
 const menuToggleBtn = $(".menu-toggle-btn");
 
@@ -43,6 +45,10 @@ const heroIntroListHandler = (event) => {
   const heroIntroBackground = $(".hero-intro-bg");
   // const imgUrl = heroIntroImgList[heroType];
   heroIntroBackground.css("background-image", `url(images/${heroType}-intro.webp)`);
+}
+
+const talentListHandler = (event) => {
+  
 }
 
 $(document).ready(async () => {

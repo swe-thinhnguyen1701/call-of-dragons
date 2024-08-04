@@ -1,7 +1,12 @@
 :root {
     --gold-color: #c28f2c;
+    --dark-gold: #cf982a;
     --nav-background-color: #191c27;
     --hover-background-color: rgba(128, 128, 128, 0.2);
+    --talent-width: 70px;
+    --talent-height: 60px;
+    --talent-core-width: 120px;
+    --talent-core-height: 90px;
 }
 
 *,
@@ -526,8 +531,126 @@ section h3 {
     text-align: center;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .patch-notes h3 {
         text-align: left;
     }
+}
+
+/* TALENT TREE */
+.talent-tree-section {
+    background-color: #0c213e;
+    padding-top: 40px;
+}
+
+.talen-stats {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.talen-stats h4 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.talent-stat{
+    opacity: 0.7;
+}
+
+.talent-container,
+.talent-img-container {
+    clip-path: polygon(50% 0, 80% 25%, 80% 75%, 50% 100%, 20% 75%, 20% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.talent-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 40px;
+}
+
+.talent-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.talent-container {
+    width: var(--talent-width);
+    height: var(--talent-height);
+    background-color: white;
+}
+
+.talent-img-container {
+    background-color: var(--dark-gold);
+    width: calc(var(--talent-width) - 10px);
+    height: calc(var(--talent-height) - 10px);
+}
+
+.talent-img {
+    width: calc(var(--talent-width) / 2);
+}
+
+.talent-atk {
+    width: calc(var(--talent-width) * 0.625);
+}
+
+.talent-level {
+    color: #fff;
+}
+
+.talent-core .talent-container {
+    width: var(--talent-core-width);
+    height: var(--talent-core-height);
+}
+
+.talent-core .talent-img-container {
+    width: calc(var(--talent-core-width) - 10px);
+    height: calc(var(--talent-core-height) - 10px);
+}
+
+.talent-core .talent-img {
+    width: 70%;
+}
+
+.talent-branch-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.talent-activated {
+    opacity: 1;
+}
+
+/* BADGE */
+.badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.badge--troop {
+    background: rgb(173, 7, 7);
+    background: linear-gradient(90deg, rgba(173, 7, 7, 1) 25%, rgba(0, 0, 0, 1) 100%);
+}
+
+.badge--primary {
+    background: rgb(6, 113, 140);
+    background: linear-gradient(90deg, rgba(6, 113, 140, 1) 25%, rgba(0, 0, 0, 1) 100%);
+}
+
+.badge--secondary {
+    background: rgb(212, 132, 28);
+    background: linear-gradient(90deg, rgba(212, 132, 28, 1) 25%, rgba(0, 0, 0, 1) 100%);
+}
+
+.talent-logo {
+    width: 30px;
+    height: 30px;
 }
